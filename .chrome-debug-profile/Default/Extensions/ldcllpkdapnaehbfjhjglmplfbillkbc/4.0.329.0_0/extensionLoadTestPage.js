@@ -1,1 +1,0 @@
-(()=>{"use strict";const e=e=>{var s;s="response",window.parent.postMessage(s,"*")};window.addEventListener("message",e)})();
