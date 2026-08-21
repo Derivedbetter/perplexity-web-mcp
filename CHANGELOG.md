@@ -4,6 +4,17 @@ All notable changes to **perplexity-web-mcp-cli** are documented in this file.
 
 ---
 
+## [0.14.10.5] - 2026-08-21
+
+### Fixed
+
+- **Codex Streamable HTTP setup** — Codex registration now targets the `/mcp` endpoint and refuses disabled, conflicting, timed-out, or failed CLI configuration instead of silently writing a fallback.
+- **Explicit HTTP transport selection** — `pwm serve-mcp --http` and `--streamable-http` select Streamable HTTP while the existing `--sse` flag remains a compatibility alias.
+
+### Changed
+
+- **Version alignment** — Package metadata, lockfile, desktop extension, bundled skill, and project skill are aligned at `0.14.10.5`.
+
 ## [0.14.10.4] - 2026-08-20
 
 ### Fixed
