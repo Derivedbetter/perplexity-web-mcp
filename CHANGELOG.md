@@ -4,6 +4,21 @@ All notable changes to **perplexity-web-mcp-cli** are documented in this file.
 
 ---
 
+## [0.14.10.4] - 2026-08-20
+
+### Fixed
+
+- **Offline-by-default tests** — Live integration tests now require explicit opt-in, and the default suite blocks undeclared socket and DNS access.
+- **Windows test portability** — Binary detection tests create their own executable fixture instead of depending on a machine-wide Python command.
+- **Windows output encoding** — CLI entry points normalize redirected output to UTF-8 without failing on streams that cannot be reconfigured.
+- **Windows daemon liveness** — PID checks use non-destructive Windows process handles, preserving live children while rejecting stale daemon locks.
+- **Failure-atomic skill customization** — Target-specific frontmatter is applied to the staged tree before promotion, preserving the previous installation if customization fails.
+- **Read-only skill uninstall** — Installer-owned read-only files are cleared through the existing Windows-safe removal path.
+
+### Changed
+
+- **Version alignment** — Package metadata, lockfile, desktop extension, bundled skill, and project skill are aligned at `0.14.10.4`.
+
 ## [0.14.10] - 2026-08-19
 
 ### Added
